@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+  }
+
+  /* changes in main-div */
+  .row1{
+    text-align: center;
+    margin: 2px;
+    border: 1px solid black;
+  }
+
+
+  /* Clear floats after the columns */
+  .row2::after {
+    content: "";
+    display: table;
+    clear: both;
+    border-style: solid;
+  }
+  .column1, .column2, .column3{
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    border: 1px solid black;
+    border-top:none;
+  }
+
+  .row3::after {
+    content: "";
+    display: table;
+    clear:both;
+    border-style: solid;
+  }
+
+  .column3_1, .column3_2{
+    float:left;
+    width: 50%;
+    text-align: center;
+    border: 1px solid black;
+    border-top:none;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+      border-style: solid;
+    }
+  }
